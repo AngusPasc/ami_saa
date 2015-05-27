@@ -12,7 +12,7 @@ var
   grDriver, grMode, errCode: integer;
 begin
   grDriver := Detect;
-  InitGraph(grDriver, grMode, 'c:\bp\bgi');
+  InitGraph(grDriver, grMode, '');
   errCode := GraphResult;
   if (errCode <> grOk) then
     SetGraph := false
