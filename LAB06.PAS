@@ -19,6 +19,27 @@ begin
   readln;
 end;
 
+procedure print2;
+const
+  z:integer = 0;
+var
+  i, j: integer;
+begin
+  inc(z);
+  writeln('Solution:',z);
+  for i:=1 to N do begin
+    for j:=1 to N do begin
+      if j = x[i] then begin
+        Write('*');
+      end else begin
+        write('0');
+      end;
+    end;
+    writeln;
+  end;
+  readln;
+end;
+
 procedure test(k:integer;var fl:boolean);
 var
   i:integer;
@@ -43,7 +64,7 @@ begin
       test(k,fl);
       if fl then begin
         if k = n then  begin
-          print;
+          print2;
         end else begin
           k:=k+1;
           r[k]:=1;
