@@ -38,10 +38,10 @@ procedure fractal(x, y, r, bg:integer);
 begin
   if r > Rmin then begin
     Draw(x, y, r, bg);
-    fractal(x-r,y-r, r div 2, 1-bg);
-    fractal(x+r,y-r, r div 2, 1-bg);
-    fractal(x+r,y+r, r div 2, 1-bg);
-    fractal(x-r,y+r, r div 2, 1-bg);
+    fractal(x-r,y-r, r div 2, bg-1);
+    fractal(x+r,y-r, r div 2, bg-1);
+    fractal(x+r,y+r, r div 2, bg-1);
+    fractal(x-r,y+r, r div 2, bg-1);
   end;
 end;
 
