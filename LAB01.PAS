@@ -14,22 +14,22 @@ const
 var
   t : masiv;
 
-procedure read_masiv(var a: masiv);
+procedure masiv_read(var a: masiv);
 begin
   a := testmasiv;
 end;
 
-procedure write_masiv(a: masiv);
+procedure masiv_write(a: masiv);
 var
   i:index;
 begin
   for i := 1 to n do begin
-    write(a[i],'; ');
+    Write(a[i],'; ');
   end;
-  writeln;
+  WriteLn;
 end;
 
-procedure straight_selection(var a:masiv);
+procedure masiv_straight_selection(var a: masiv);
 var
   i, j, k: index;
   x: item;
@@ -49,9 +49,9 @@ begin
 end;
 
 begin
-  read_masiv(t);
-  write_masiv(t);
-  straight_selection(t);
-  write_masiv(t);
+  masiv_read(t);
+  masiv_write(t);
+  masiv_straight_selection(t);
+  masiv_write(t);
   readln;
 end.
