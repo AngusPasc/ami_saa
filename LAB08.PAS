@@ -9,7 +9,7 @@ const
 
 function SetGraph:boolean;
 var
-  grDriver, grMode, errCode: integer;
+  grDriver, grMode, errCode: smallint;
 begin
   grDriver := Detect;
   InitGraph(grDriver, grMode, '');
