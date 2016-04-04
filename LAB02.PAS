@@ -42,7 +42,7 @@ begin
         a[j] := x;
       end;
     end;
-    masiv_write(t);
+    masiv_write(a);
   end;
 end;
 
