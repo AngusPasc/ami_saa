@@ -45,6 +45,7 @@ begin
     end;
     a[k] := a[i];
     a[i] := x;
+    masiv_write(a);
   end; 
 end;
 
