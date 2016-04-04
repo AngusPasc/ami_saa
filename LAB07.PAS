@@ -7,24 +7,24 @@ const
   count:integer = 0;
 begin
   inc(count); {count := count + 1}
-  writeln(count, ' Move disk from ', a, ' to ', b);
+  WriteLn(count, ' Move ring from ', a, ' to ', b);
 end;
 
-procedure hanoj(n, a, b, c:integer);
+procedure Hanoi(n, a, b, c:integer);
 begin
   if n = 1 then begin
     move(a, b);
   end else begin
-    hanoj(n-1, a, c, b);
+    Hanoi(n-1, a, c, b);
     move(a, b);
-    hanoj(n-1, c, b, a);
+    Hanoi(n-1, c, b, a);
   end;
 end;
 
 begin
-  writeln;
-  hanoj(n,1,2,3);
-  readln;
+  WriteLn;
+  Hanoi(n, 1, 2, 3);
+  ReadLn;
 end.
 {---------------------------------------------------}
 program Lab07;
