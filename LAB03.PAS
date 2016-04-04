@@ -14,14 +14,14 @@ const
 var
   t : masiv;
 
-procedure read_masiv(var a: masiv);
+procedure masiv_read(var a: masiv);
 var
   i:index;
 begin
   a := testmasiv;
 end;
 
-procedure write_masiv(a: masiv);
+procedure masiv_write(a: masiv);
 var
   i: index;
 begin
@@ -31,7 +31,7 @@ begin
   writeln;
 end;
 
-procedure straight_insert(var a: masiv);
+procedure masiv_straight_insert(var a: masiv);
 var
   i, j: index;
   x: item;
@@ -44,14 +44,14 @@ begin
       j := j-1;
     end;
     a[j+1] := x;
-    write_masiv(a);
+    masiv_write(a);
   end;
 end;
 
 begin
-  read_masiv(t);
-  write_masiv(t);
-  straight_insert(t);
-  write_masiv(t);
+  masiv_read(t);
+  masiv_write(t);
+  masiv_straight_insert(t);
+  masiv_write(t);
   readln;
 end.
