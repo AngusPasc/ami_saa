@@ -14,12 +14,12 @@ const
 var
   t: masiv;
 
-procedure read_masiv(var a: masiv);
+procedure masiv_read(var a: masiv);
 begin
   a := testmasiv;
 end;
 
-procedure write_masiv(a: masiv);
+procedure masiv_write(a: masiv);
 var
   i:index;
 begin
@@ -29,7 +29,7 @@ begin
   writeln;
 end;
 
-procedure buble_sort(var a:masiv);
+procedure masiv_buble_sort(var a:masiv);
 var
   i, j: index;
   x: item;
@@ -47,9 +47,9 @@ begin
 end;
 
 begin
-  read_masiv(t);
-  write_masiv(t);
-  buble_sort(t);
-  write_masiv(t);
+  masiv_read(t);
+  masiv_write(t);
+  masiv_buble_sort(t);
+  masiv_write(t);
   readln;
 end.
