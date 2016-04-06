@@ -8,9 +8,9 @@ type
     next: PLIFO;
   end;
 
-  procedure Init(var top:PLIFO);
+  procedure Init(var s:PLIFO);
   begin
-    top := nil;
+    s := nil;
   end;
 
   procedure Push(var s:PLIFO; item:Te; var fl:boolean);
@@ -50,9 +50,9 @@ procedure Pop(var s:PLIFO; var item:Te; var fl:boolean);
     end;
   end;
 
-  function Empty(top: PLIFO):boolean;
+  function Empty(s: PLIFO):boolean;
   begin
-    Empty := (top = nil);
+    Empty := (s = nil);
   end;
 
   var
