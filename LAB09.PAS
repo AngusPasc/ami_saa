@@ -68,13 +68,20 @@ begin
   for i := 1 to 3 do begin
     write('Push value=');readln(x);
     Push(s1, x, fl);
+    if not fl then begin
+      WriteLn('Error');
+    end;
   end;
 
   writeln('-----------');
   for i := 1 to 4 do begin
     if not Empty(s1) then begin
       Pop(s1, x, fl);
-      if fl then writeln('Pop value=',x);
+      if fl then begin
+        WriteLn('Pop value=', x);
+      end else begin
+        WriteLn('Error');
+      end;
     end;
   end;
 
