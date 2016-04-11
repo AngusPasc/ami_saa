@@ -70,7 +70,11 @@ begin
   writeln('-----------');
   for i := 1 to 4 do begin
     Get(first, last, x, fl);
-    if fl then writeln('Get value=',x);
+    if fl then begin
+      WriteLn('Get value=',x);
+    end else begin
+      WriteLn('Error');
+    end;
   end;
   readln;
 end.
