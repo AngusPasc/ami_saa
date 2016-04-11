@@ -57,6 +57,7 @@ type
 
 var
   first, last: PFIFO;
+  first2, last2: PFIFO;
   x:Te;
   i:integer;
   fl: boolean;
@@ -76,5 +77,16 @@ begin
       WriteLn('Error');
     end;
   end;
-  readln;
+  
+  Init(first2, last2);
+  Put(first2, last2, 5, fl);
+  Put(first2, last2, 12, fl);
+  Get(first2, last2, x, fl);
+  if fl then begin
+    WriteLn('Get value=',x);
+  end else begin
+    WriteLn('Error');
+  end;
+  
+  ReadLn;
 end.
